@@ -1,6 +1,6 @@
 from rest_framework import viewsets, permissions
 from .models import Match, Prediction
-from .serializers import MatchSerializer, PredictionSerializer
+from ..users.serializers import MatchSerializer, PredictionSerializer
 
 class MatchViewSet(viewsets.ModelViewSet):
     queryset = Match.objects.all().order_by('-match_date')
